@@ -8,7 +8,7 @@ export const authOptions = {
   providers: [
     CredentialsProvider({
       name: 'Credentials',
-      credentials: {
+      credentials: { //รับมาจาก หน้า Login เป็น credentials 
         code: {  type: 'text' },
         password: { type: 'password' },
       },
@@ -25,7 +25,7 @@ export const authOptions = {
             code: user.code
           }
         } else {
-          throw new Error('Invalid email or password')
+          throw new Error('ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง')
         }
       },
     })
