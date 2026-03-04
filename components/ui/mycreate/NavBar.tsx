@@ -1,7 +1,7 @@
 'use client'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../dropdown-menu'
 import { Button } from '../button'
-import { BadgeCheckIcon, BellIcon, CreditCardIcon, LogOutIcon, UserIcon } from 'lucide-react'
+import { BadgeCheckIcon, BellIcon, CreditCardIcon, LogOutIcon, Settings, UserIcon, Users } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '../avatar'
 import { Input } from '../input'
 import { Field, FieldLabel } from '../field'
@@ -33,8 +33,8 @@ const NavBar = () => {
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
                                     <DropdownMenuGroup>
-                                        <DropdownMenuItem onClick={() => setOpen(true)}>เพิ่ม</DropdownMenuItem>
-                                        <DropdownMenuItem onClick={() => router.push('/Homepage/setting')}>ตั้งค่า</DropdownMenuItem>
+                                        <DropdownMenuItem onClick={() => router.push('/Homepage/addpatients')}><Users />เพิ่มข้อมูลผู้ป่วย</DropdownMenuItem>
+                                        <DropdownMenuItem onClick={() => router.push('/Homepage/setting')}><Settings />ตั้งค่า</DropdownMenuItem>
                                     </DropdownMenuGroup>
                                 </DropdownMenuContent>
                             </DropdownMenu>
@@ -76,7 +76,7 @@ const NavBar = () => {
                     </Field>
                 </div>
             </div>
-            <Dialog open={open} onOpenChange={setOpen}>
+            {/* <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent className="sm:max-w-md">
                     <form >
                         <DialogHeader>
@@ -103,7 +103,7 @@ const NavBar = () => {
                         </DialogFooter>
                     </form>
                 </DialogContent>
-            </Dialog>
+            </Dialog> */}
         </div >
     )
 }

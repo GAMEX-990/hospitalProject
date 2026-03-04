@@ -20,3 +20,8 @@ model Users {
   code String
   password String
 }
+
+model patient {
+  id Int @id @default(autoincrement())
+  
+}
